@@ -1,0 +1,46 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "first_name": "Sebastian",
+      "last_name": "Eschweiler",
+      "salary": 10000
+    },
+    {
+      "id": 2,
+      "first_name": "Steve",
+      "last_name": "Palmer",
+      "salary": 25000
+    },
+    {
+      "id": 3,
+      "first_name": "Ann",
+      "last_name": "Smith",
+      "salary": 13000
+    },
+    {
+      "first_name": "Test",
+      "last_name": "S",
+      "salary": 12000,
+      "id": 4
+    },
+    {
+      "first_name": "Kavitha",
+      "last_name": "NS",
+      "salary": 9000,
+      "id": 5
+    },
+    {
+      "first_name": "XYZ",
+      "last_name": "S",
+      "salary": 90000,
+      "id": 6
+    },
+    {
+      "first_name": "Dhanush",
+      "last_name": "RajPrasad",
+      "salary": 50000,
+      "id": 7
+    }
+  ]
+}
