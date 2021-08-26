@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Ajax with promise</title>
+    <style>
+        .body{
+            margin: auto;
+        }
+        div{
+            border: 1px solid black;
+            background-color: lightblue;
+            padding: 50px;
+            width: 80%;
+            font-size: xx-large;
+            margin-top: 50px;
+        }
+    </style>
+    <script src="../js/Test.js"></script>
+    </head>
+    <body>
+        <h1>Test Services</h1>
+        <div id="get-services"></div>
+        <div id="delete-services"></div>
+        <div id="post-services"></div>
+        <script>
+            //get using get method and promise
+const getURL = "http://localhost:3000/employees/1";
+makePromiseCall("GET",getURL,true).then(responseText=>{
+    document.querySelector("#get-services").textContent = "User data: "+responseText;
+}).catch(error=>{document.querySelector("#get-services").textContent = "Get Error status: "+JSON.stringify(error);});
+//delete using delete method and promise
+const delURL = "http://localhost:3000/employees/7";
+makePromiseCall("DELETE",delURL,false).then(responseText=>{
+    document.querySelector("#delete-services").textContent = "Deleted data: "+responseText;
+}).catch(error=>{document.querySelector("#delete-services").textContent = "Delete Error status:: "+JSON.stringify(error);})
+//post using post method and promise
+const postURL = "http://localhost:3000/employees";
+const empData = {"first_name":"Dhanush","last_name":"RajPrasad","salary":50000};
+makePromiseCall("POST",postURL,true,empData).then(responseText=>{
+    document.querySelector("#post-services").textContent = "Added data: "+responseText;
+}).catch(error=>{document.querySelector("#post-services").textContent = "Post error status: "+JSON.stringify(error);})
+        </script>
+    </body>
+    </html>
+
+
+    
